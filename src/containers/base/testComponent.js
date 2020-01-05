@@ -1,6 +1,5 @@
 import React, {useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import Button from '@material-ui/core/Button';
 import {actionTypes, selectors} from '../../redux/counter';
 
 const Counter = () => {
