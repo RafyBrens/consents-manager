@@ -1,5 +1,5 @@
 import {INCREMENT_COUNTER} from './actionTypes';
-import CounterReducer from './CounterReducer';
+import CounterReducer from './counterReducer';
 
 describe('Redux > counter > CounterReducer', () => {
   /* All test cases are very simple, since Redux reducers are pure functions */

@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {actionTypes, selectors} from '../../Redux/counter';
+import Button from '@material-ui/core/Button';
+import {actionTypes, selectors} from '../../redux/counter';
 
 const Counter = () => {
   /* Get count value from Redux store. We defined selector (state => state.counter.value) inside counter feature folder, to make component Redux agnostic */
@@ -17,7 +18,7 @@ const Counter = () => {
 
   return (
     <div>
-      <div>Counter component</div>
+      <div>Base component</div>
       <button type="button" onClick={handleClick}>
         Click me!
       </button>

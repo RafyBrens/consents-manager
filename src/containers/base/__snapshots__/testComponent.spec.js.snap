@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src > components > Counter renders without crashing 1`] = `
+exports[`src > containers > Counter renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -16,7 +16,7 @@ exports[`src > components > Counter renders without crashing 1`] = `
   <Counter>
     <div>
       <div>
-        Counter component
+        Base component
       </div>
       <button
         onClick={[Function]}

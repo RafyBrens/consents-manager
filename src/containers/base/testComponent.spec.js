@@ -3,10 +3,10 @@ import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
-import {actionTypes} from '../../Redux/counter';
-import Counter from './Counter';
+import {actionTypes} from '../../redux/counter';
+import Counter from './testComponent';
 
-describe('src > components > Counter', () => {
+describe('src > containers > Counter', () => {
   /* Create mock store with count value */
   const mockStore = configureStore([]);
   const store = mockStore({

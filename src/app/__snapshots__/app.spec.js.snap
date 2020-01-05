@@ -12,14 +12,14 @@ exports[`renders without crashing 1`] = `
     }
   }
 >
-  <App>
+  <app>
     <div
-      className="App"
+      className="app"
     >
       <Counter>
         <div>
           <div>
-            Counter component
+            Base component
           </div>
           <button
             onClick={[Function]}
@@ -37,6 +37,6 @@ exports[`renders without crashing 1`] = `
         </div>
       </Counter>
     </div>
-  </App>
+  </app>
 </Provider>
 `;
