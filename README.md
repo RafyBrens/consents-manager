@@ -80,3 +80,8 @@ Extended CRA eslint rules, Added `prettier` to force consistent formatting and `
 
 You can use source folder relative paths for imports. `import Component from './../../../../../../src/components/Component'` becomes `import Component from 'components/Component'`. Configuration is inside `jsconfig.json` file.
 
+
+## Present issues in the project
+Warning: [JSS] Could not find the referenced rule "checked" in "makeStyles".
+It's an issue in material-ui.
+https://github.com/mui-org/material-ui/issues/15511
