@@ -1,5 +1,6 @@
-import {combineReducers, createStore} from 'redux';
-import {ConsentReducer} from './consent';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import { ConsentReducer } from './consent';
 
 /* Create root reducer, containing all features of the application */
 const rootReducer = combineReducers({
@@ -7,10 +8,13 @@ const rootReducer = combineReducers({
 });
 
 /* eslint-disable no-underscore-dangle */
-const reduxDevtoolsEnhancer =
+const reduxEnhacer =
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(); // initialize Redux Dev Tools, if they are installed in browser.
 /* eslint-enable */
 
-const store = createStore(rootReducer, reduxDevtoolsEnhancer);
+const store = createStore(
+  rootReducer,
+  compose(applyMiddleware(thunk), reduxEnhacer)
+);
 
 export default store;

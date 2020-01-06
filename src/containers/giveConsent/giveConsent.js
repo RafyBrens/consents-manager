@@ -1,19 +1,24 @@
-import React, {useCallback} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {Box, Button} from '@material-ui/core';
+import React, { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Box, Button } from '@material-ui/core';
 
 /* Separte internal imports */
 import Sidebar from 'common/components/sidebar';
 import Input from 'common/components/input';
 import CustomCheckbox from 'common/components/customCheckBox';
-
-import {selectors, actionTypes} from '../../redux/consent';
+import {
+  createConsent,
+  changeName,
+  changeEmail,
+  changeAgreement,
+} from 'redux/consent/actions';
+import { selectors } from '../../redux/consent';
 import useStyles from './styles';
 
 const items = [
-  {id: 1, text: 'Receive newsletter'},
-  {id: 2, text: 'Be shown targeted ads'},
-  {id: 3, text: 'Contribute to anonymous visit statistics'},
+  { id: 1, text: 'Receive newsletter' },
+  { id: 2, text: 'Be shown targeted ads' },
+  { id: 3, text: 'Contribute to anonymous visit statistics' },
 ];
 
 const GiveConsent = () => {
@@ -23,6 +28,9 @@ const GiveConsent = () => {
   /* Get values from Redux store. We defined selector (state => state.consent.email) inside consent feature folder, to make component Redux agnostic */
   const name = useSelector(state => selectors.getConsentName(state));
   const email = useSelector(state => selectors.getConsentEmail(state));
+  const isSubmitEnabled = useSelector(state =>
+    selectors.isSubmitEnabled(state)
+  );
   const agreements = useSelector((state, id) =>
     selectors.getAgreements(state, id)
   );
@@ -30,34 +38,24 @@ const GiveConsent = () => {
 
   /* `useCallback` hook prevents component from unnecessary rerender, since otherwise child components may render unnecessarily due to the changed reference */
   const handleChangeName = useCallback(
-    event => {
-      dispatch({
-        type: actionTypes.CHANGE_NAME_CONSENT,
-        payload: event.target.value,
-      });
-    },
+    event => dispatch(changeName(event.target.value)),
     [dispatch]
   );
-
   const handleChangeEmail = useCallback(
-    event => {
-      dispatch({
-        type: actionTypes.CHANGE_EMAIL_CONSENT,
-        payload: event.target.value,
-      });
-    },
+    event => dispatch(changeEmail(event.target.value)),
     [dispatch]
   );
-
   const handleChangeAgreement = useCallback(
-    event => {
-      dispatch({
-        type: actionTypes.CHANGE_AGREEMENTS_CONSENT,
-        payload: {id: event.target.value, checked: event.target.checked},
-      });
-    },
+    event =>
+      dispatch(
+        changeAgreement({
+          id: event.target.value,
+          checked: event.target.checked,
+        })
+      ),
     [dispatch]
   );
+  const handleSubmit = useCallback(() => dispatch(createConsent()), [dispatch]);
 
   return (
     <Sidebar>
@@ -90,6 +88,8 @@ const GiveConsent = () => {
           <Button
             variant="contained"
             color="primary"
+            disabled={!isSubmitEnabled}
+            onClick={handleSubmit}
             className={classes.submitButton}>
             Give consent
           </Button>

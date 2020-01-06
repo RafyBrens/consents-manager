@@ -1,1 +1,1 @@
-export {default} from './giveConsent';
+export { default } from './giveConsent';
