@@ -44,6 +44,6 @@ const Sidebar = props => {
   );
 };
 
-Sidebar.propTypes = {children: PropTypes.node.isRequired};
+Sidebar.propTypes = { children: PropTypes.node.isRequired };
 
 export default Sidebar;
