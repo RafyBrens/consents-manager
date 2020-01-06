@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useCallback} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+
 import {makeStyles} from '@material-ui/core/styles';
 import {Box, Checkbox} from '@material-ui/core';
 import Sidebar from 'common/components/sidebar';
+import {actionTypes, selectors} from '../../redux/consent';
 
 const useStyles = makeStyles(theme => ({
   box: {
@@ -42,12 +45,45 @@ const useStyles = makeStyles(theme => ({
 const GiveConsent = () => {
   const classes = useStyles();
 
+  const name = useSelector(state => selectors.getConsentName(state));
+  const email = useSelector(state => selectors.getConsentEmail(state));
+
+  const dispatch = useDispatch();
+
+  const handleChangeName = useCallback(
+    event => {
+      dispatch({
+        type: actionTypes.CHANGE_NAME_CONSENT,
+        payload: event.target.value,
+      });
+    },
+    [dispatch]
+  );
+  const handleChangeEmail = useCallback(
+    event => {
+      dispatch({
+        type: actionTypes.CHANGE_EMAIL_CONSENT,
+        payload: event.target.value,
+      });
+    },
+    [dispatch]
+  );
   return (
     <Sidebar>
       <div className={classes.center}>
         <Box>
-          <input placeholder="Name" className={classes.input} />
-          <input placeholder="Email address" className={classes.input} />
+          <input
+            placeholder="Name"
+            className={classes.input}
+            onChange={handleChangeName}
+            value={name}
+          />
+          <input
+            placeholder="Email address"
+            className={classes.input}
+            onChange={handleChangeEmail}
+            value={email}
+          />
           <div className={(classes.center, classes.textAlignCenter)}>
             <p>I agree to:</p>
           </div>
