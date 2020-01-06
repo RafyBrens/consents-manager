@@ -1,5 +1,4 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
@@ -8,35 +7,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import PropTypes from 'prop-types';
 
-const drawerWidth = 240;
+/* Separte internal imports */
+import useStyles from './styles';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: 'white',
-    padding: theme.spacing(3),
-  },
-  item: {
-    marginTop: '10px',
-  },
-}));
 const Sidebar = props => {
   const classes = useStyles();
+  const items = ['Give consent', 'Collected consents'];
 
   return (
     <div className={classes.root}>
@@ -49,8 +25,8 @@ const Sidebar = props => {
         }}
         anchor="left">
         <List>
-          {['Give consent', 'Collected consents'].map((text, index) => (
-            <div className={classes.item}>
+          {items.map(text => (
+            <div key={text} className={classes.item}>
               <Divider />
               <ListItem button key={text}>
                 <ListItemText primary={text} />
@@ -62,7 +38,7 @@ const Sidebar = props => {
       </Drawer>
       <main className={classes.content}>
         {props.children}
-        <div className={classes.toolbar} />
+        <div className={classes.topbar} />
       </main>
     </div>
   );

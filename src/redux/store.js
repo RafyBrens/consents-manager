@@ -1,10 +1,8 @@
 import {combineReducers, createStore} from 'redux';
-import {CounterReducer} from './counter';
 import {ConsentReducer} from './consent';
 
 /* Create root reducer, containing all features of the application */
 const rootReducer = combineReducers({
-  count: CounterReducer,
   consent: ConsentReducer,
 });
 

@@ -1,55 +1,34 @@
 import React, {useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import {Box, Button} from '@material-ui/core';
 
-import {makeStyles} from '@material-ui/core/styles';
-import {Box, Checkbox} from '@material-ui/core';
+/* Separte internal imports */
 import Sidebar from 'common/components/sidebar';
-import {actionTypes, selectors} from '../../redux/consent';
+import Input from 'common/components/input';
+import CustomCheckbox from 'common/components/customCheckBox';
 
-const useStyles = makeStyles(theme => ({
-  box: {
-    border: '1px solid lightgray',
-    margin: 'auto',
-    color: 'gray',
-  },
-  center: {
-    margin: 'auto',
-    width: '50%',
-  },
-  input: {
-    padding: '5px',
-    margin: '20px',
-    border: '1px solid black',
-    lineHeight: '40px',
-    width: '40%',
-    '&::placeholder': {
-      color: 'black',
-      fontSize: '16px',
-    },
-  },
-  textAlignCenter: {
-    textAlign: 'center',
-  },
-  submitButton: {
-    backgroundColor: 'rgb(10, 138, 251)',
-    color: 'white',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    marginTop: '10px',
-    height: '60px',
-    width: '25%',
-    borderRadius: '10px',
-  },
-}));
+import {selectors, actionTypes} from '../../redux/consent';
+import useStyles from './styles';
+
+const items = [
+  {id: 1, text: 'Receive newsletter'},
+  {id: 2, text: 'Be shown targeted ads'},
+  {id: 3, text: 'Contribute to anonymous visit statistics'},
+];
 
 const GiveConsent = () => {
+  const dispatch = useDispatch();
   const classes = useStyles();
 
+  /* Get values from Redux store. We defined selector (state => state.consent.email) inside consent feature folder, to make component Redux agnostic */
   const name = useSelector(state => selectors.getConsentName(state));
   const email = useSelector(state => selectors.getConsentEmail(state));
+  const agreements = useSelector((state, id) =>
+    selectors.getAgreements(state, id)
+  );
+  const isCheckBoxChecked = id => agreements.includes(id);
 
-  const dispatch = useDispatch();
-
+  /* `useCallback` hook prevents component from unnecessary rerender, since otherwise child components may render unnecessarily due to the changed reference */
   const handleChangeName = useCallback(
     event => {
       dispatch({
@@ -59,6 +38,7 @@ const GiveConsent = () => {
     },
     [dispatch]
   );
+
   const handleChangeEmail = useCallback(
     event => {
       dispatch({
@@ -68,19 +48,24 @@ const GiveConsent = () => {
     },
     [dispatch]
   );
+
+  const handleChangeAgreement = useCallback(
+    event => {
+      dispatch({
+        type: actionTypes.CHANGE_AGREEMENTS_CONSENT,
+        payload: {id: event.target.value, checked: event.target.checked},
+      });
+    },
+    [dispatch]
+  );
+
   return (
     <Sidebar>
       <div className={classes.center}>
         <Box>
-          <input
-            placeholder="Name"
-            className={classes.input}
-            onChange={handleChangeName}
-            value={name}
-          />
-          <input
+          <Input placeholder="Name" onChange={handleChangeName} value={name} />
+          <Input
             placeholder="Email address"
-            className={classes.input}
             onChange={handleChangeEmail}
             value={email}
           />
@@ -89,22 +74,25 @@ const GiveConsent = () => {
           </div>
         </Box>
         <Box className={classes.box}>
-          <Checkbox color="primary" />
-          <span>Receive newsletter</span>
-
-          <br />
-          <Checkbox color="primary" />
-          <span>Be shown targeted ads</span>
-          <br />
-
-          <Checkbox color="primary" />
-          <span>Contribute to anonymous visit statistics</span>
-          <br />
+          {items.map(item => (
+            <div key={item.id}>
+              <CustomCheckbox
+                onChange={handleChangeAgreement}
+                checked={isCheckBoxChecked(item.id)}
+                value={item.id}
+              />
+              <span>{item.text}</span>
+              <br />
+            </div>
+          ))}
         </Box>
         <Box className={(classes.center, classes.textAlignCenter)}>
-          <button type="button" className={classes.submitButton}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.submitButton}>
             Give consent
-          </button>
+          </Button>
         </Box>
       </div>
     </Sidebar>
