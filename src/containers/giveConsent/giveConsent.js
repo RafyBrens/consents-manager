@@ -61,8 +61,14 @@ const GiveConsent = () => {
     <Sidebar>
       <div className={classes.center}>
         <Box>
-          <Input placeholder="Name" onChange={handleChangeName} value={name} />
           <Input
+            id="nameUser"
+            placeholder="Name"
+            onChange={handleChangeName}
+            value={name}
+          />
+          <Input
+            id="email"
             placeholder="Email address"
             onChange={handleChangeEmail}
             value={email}

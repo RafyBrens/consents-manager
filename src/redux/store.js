@@ -7,14 +7,10 @@ const rootReducer = combineReducers({
   consent: ConsentReducer,
 });
 
-/* eslint-disable no-underscore-dangle */
-const reduxEnhacer =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(); // initialize Redux Dev Tools, if they are installed in browser.
-/* eslint-enable */
-
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
-  compose(applyMiddleware(thunk), reduxEnhacer)
+  composeEnhancers(applyMiddleware(compose(thunk)))
 );
 
 export default store;
