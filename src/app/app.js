@@ -1,9 +1,9 @@
 import React from 'react';
-import Counter from '../containers/base';
+import GiveConsent from 'containers/giveConsent';
 
 const app = () => (
   <div className="app">
-    <Counter />
+    <GiveConsent />
   </div>
 );
 
