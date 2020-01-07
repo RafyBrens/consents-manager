@@ -92,6 +92,7 @@ const GiveConsent = () => {
         </Box>
         <Box className={(classes.center, classes.textAlignCenter)}>
           <Button
+            id="submitButton"
             variant="contained"
             color="primary"
             disabled={!isSubmitEnabled}

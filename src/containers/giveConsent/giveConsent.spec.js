@@ -46,25 +46,52 @@ describe('src > containers > GiveConsent', () => {
     /* More precise test for input value */
     const name = wrapper
       .find('#nameUser')
-      .first()
+      .hostNodes()
       .props().value; // here name value is displayed
     expect(name).toBe(consent.data.name); // Rafael is value we expect.
 
     const email = wrapper
       .find('#email')
-      .first()
+      .hostNodes()
       .props().value;
     expect(email).toBe(consent.data.email);
   });
 
-  it('dispatches an action on button click', () => {
+  it('Does not dispatch any action because button is disabled', () => {
+    /* Set agreements value to empty so that button is disabled */
+    const newStore = mockStore({
+      consent: {
+        ...consent,
+        data: {
+          ...consent.data,
+          name: '',
+        },
+      },
+    });
+    const wrapper = mount(
+      <Provider store={newStore}>
+        <GiveConsent />
+      </Provider>
+    );
+
+    wrapper
+      .find('#submitButton')
+      .hostNodes()
+      .props()
+      .onClick();
+
+    /* */
+    expect(store.dispatch).toHaveBeenCalledTimes(0);
+  });
+
+  it('Fills inputs of give consent page and clicks submit', () => {
     const wrapper = mount(
       <Provider store={store}>
         <GiveConsent />
       </Provider>
     );
 
-    /* Search for the button and make enzyme click on it */
+    /* Search for the input and types on it */
     const nameEventObj = { currentTarget: { value: 'test' } };
     const actionName = {
       payload: 'Rafael',
@@ -73,13 +100,14 @@ describe('src > containers > GiveConsent', () => {
 
     wrapper
       .find('#nameUser')
-      .first()
+      .hostNodes()
       .simulate('change', nameEventObj);
 
     /* Check if store.dispatch method was run */
     expect(store.dispatch).toHaveBeenCalledTimes(1);
     expect(store.getActions()).toEqual([actionName]);
 
+    /* Search for the input and types on it */
     const emailEventObject = { currentTarget: { value: 'r@gmail.com' } };
     const actionEmail = {
       payload: 'rafybrens@gmail.com',
@@ -87,19 +115,24 @@ describe('src > containers > GiveConsent', () => {
     };
     wrapper
       .find('#email')
-      .first()
+      .hostNodes()
       .simulate('change', emailEventObject);
 
-    /* Check if store.dispatch method was run */
     expect(store.dispatch).toHaveBeenCalledTimes(2);
     expect(store.getActions()).toEqual([actionName, actionEmail]);
 
+    /* Search for the button and make enzyme click on it */
     const actionSubmit = {
       type: actionTypes.CREATE_CONSENT_STARTED,
     };
+
     wrapper
-      .find('#email')
-      .first()
-      .simulate('change', emailEventObject);
+      .find('#submitButton')
+      .hostNodes()
+      .props()
+      .onClick();
+
+    expect(store.dispatch).toHaveBeenCalledTimes(3);
+    expect(store.getActions()).toEqual([actionName, actionEmail, actionSubmit]);
   });
 });
