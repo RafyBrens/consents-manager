@@ -1,9 +1,10 @@
 import React from 'react';
-import Counter from '../containers/base';
+
+import Routes from 'routes';
 
 const app = () => (
   <div className="app">
-    <Counter />
+    <Routes />
   </div>
 );
 

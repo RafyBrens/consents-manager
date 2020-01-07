@@ -1,16 +1,23 @@
-import {combineReducers, createStore} from 'redux';
-import {CounterReducer} from './counter';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import { createBrowserHistory } from 'history';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
+
+import { ConsentReducer } from './consent';
+
+export const history = createBrowserHistory();
 
 /* Create root reducer, containing all features of the application */
-const rootReducer = combineReducers({
-  count: CounterReducer,
-});
+const createRootReducer = historyParam =>
+  combineReducers({
+    consent: ConsentReducer,
+    router: connectRouter(historyParam),
+  });
 
-/* eslint-disable no-underscore-dangle */
-const reduxDevtoolsEnhancer =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(); // initialize Redux Dev Tools, if they are installed in browser.
-/* eslint-enable */
-
-const store = createStore(rootReducer, reduxDevtoolsEnhancer);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  createRootReducer(history),
+  composeEnhancers(applyMiddleware(thunk, routerMiddleware(history)))
+);
 
 export default store;

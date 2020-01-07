@@ -9,7 +9,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
     "import/prefer-default-export": 0,
-    "object-curly-spacing": ["error", "never"],
+    "object-curly-spacing": "off",
     "arrow-body-style": ["warn", "as-needed"],
     "prettier/prettier": ["warn"],
     "react/destructuring-assignment": "off",
