@@ -36,6 +36,7 @@ Tests use `redux-mock-store`
 
 ## Eslint configuration
 Extended CRA eslint rules, Added `prettier` to force consistent formatting and `eslint-plugin-fp` to avoid accidental mutations.
+It's important to mention that `prettier` may give you the impression that there is a lot of code (number of lines) when there is actually some few event handlers, since it tries to make lines shorter, but during development, you will certainly find easy and comfortable to make changes to existing code, which at end, is a great added value. 
 
 ```js
 
