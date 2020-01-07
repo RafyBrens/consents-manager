@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
   },
   center: {
     margin: 'auto',
-    width: '50%',
+    width: '90%',
   },
   textAlignCenter: {
     textAlign: 'center',
