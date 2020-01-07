@@ -21,7 +21,7 @@ const items = [
   { id: 3, text: 'Contribute to anonymous visit statistics' },
 ];
 
-const GiveConsent = () => {
+const ListConsents = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
@@ -106,4 +106,4 @@ const GiveConsent = () => {
   );
 };
 
-export default GiveConsent;
+export default ListConsents;
