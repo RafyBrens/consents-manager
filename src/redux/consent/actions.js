@@ -1,3 +1,5 @@
+import { push } from 'connected-react-router';
+
 import ConsentService from 'common/api/ConsentService';
 import {
   CHANGE_EMAIL_CONSENT,
@@ -22,6 +24,7 @@ export const createConsent = () => async (dispatch, getState) => {
     dispatch({ type: CREATE_CONSENT_STARTED });
     const data = await ConsentService.createConsent(getState().consent.data);
     dispatch({ type: CREATE_CONSENT_FINISHED, payload: data });
+    dispatch(push('/consents'));
   } catch (err) {
     dispatch({ type: CREATE_CONSENT_FAILED, payload: err });
   }
