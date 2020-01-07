@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
@@ -23,6 +23,7 @@ const Input = props => {
   const onChange = event => props.onChange(event);
   return (
     <input
+      id={props.id}
       placeholder={props.placeholder}
       className={classes.input}
       onChange={onChange}
@@ -32,6 +33,7 @@ const Input = props => {
 };
 
 Input.propTypes = {
+  id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,

@@ -1,9 +1,10 @@
 import React from 'react';
-import GiveConsent from 'containers/giveConsent';
+
+import Routes from 'routes';
 
 const app = () => (
   <div className="app">
-    <GiveConsent />
+    <Routes />
   </div>
 );
 

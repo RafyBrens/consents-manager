@@ -36,6 +36,7 @@ Tests use `redux-mock-store`
 
 ## Eslint configuration
 Extended CRA eslint rules, Added `prettier` to force consistent formatting and `eslint-plugin-fp` to avoid accidental mutations.
+It's important to mention that `prettier` may give you the impression that there is a lot of code (number of lines) when there is actually some few event handlers, since it tries to make lines shorter, but during development, you will certainly find easy and comfortable to make changes to existing code, which at end, is a great added value. 
 
 ```js
 
@@ -80,3 +81,8 @@ Extended CRA eslint rules, Added `prettier` to force consistent formatting and `
 
 You can use source folder relative paths for imports. `import Component from './../../../../../../src/components/Component'` becomes `import Component from 'components/Component'`. Configuration is inside `jsconfig.json` file.
 
+
+## Present issues in the project
+Warning: [JSS] Could not find the referenced rule "checked" in "makeStyles".
+It's an issue in material-ui.
+https://github.com/mui-org/material-ui/issues/15511
