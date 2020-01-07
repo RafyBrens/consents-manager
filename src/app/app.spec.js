@@ -1,14 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import toJson from 'enzyme-to-json';
+import { MemoryRouter } from 'react-router-dom';
 import store from '../redux/store';
 import App from './app';
 
 it('renders without crashing', () => {
-  const wrapper = mount(
+  const wrapper = shallow(
     <Provider store={store}>
-      <App />
+      <MemoryRouter initialEntries={['/']} keyLength={0}>
+        <App />
+      </MemoryRouter>
     </Provider>
   );
   expect(toJson(wrapper)).toMatchSnapshot();
