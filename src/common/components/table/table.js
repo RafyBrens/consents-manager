@@ -16,8 +16,6 @@ const CustomTable = ({ columns, data, pageSize }) => {
     canPreviousPage,
     canNextPage,
     pageOptions,
-    pageCount,
-    gotoPage,
     nextPage,
     previousPage,
     state: { pageIndex },
