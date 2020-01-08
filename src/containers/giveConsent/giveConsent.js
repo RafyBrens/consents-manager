@@ -15,7 +15,7 @@ import Sidebar from '../sidebar';
 import { selectors } from '../../redux/consent';
 import useStyles from './styles';
 
-const items = [
+const checkBoxItems = [
   { id: 1, text: 'Receive newsletter' },
   { id: 2, text: 'Be shown targeted ads' },
   { id: 3, text: 'Contribute to anonymous visit statistics' },
@@ -37,6 +37,7 @@ const GiveConsent = () => {
   const isCheckBoxChecked = id => agreements.includes(id);
 
   /* `useCallback` hook prevents component from unnecessary rerender, since otherwise child components may render unnecessarily due to the changed reference */
+  const handleSubmit = useCallback(() => dispatch(createConsent()), [dispatch]);
   const handleChangeName = useCallback(
     event => dispatch(changeName(event.target.value)),
     [dispatch]
@@ -55,7 +56,6 @@ const GiveConsent = () => {
       ),
     [dispatch]
   );
-  const handleSubmit = useCallback(() => dispatch(createConsent()), [dispatch]);
 
   return (
     <Sidebar>
@@ -77,8 +77,9 @@ const GiveConsent = () => {
             <p>I agree to:</p>
           </div>
         </Box>
+
         <Box className={classes.box}>
-          {items.map(item => (
+          {checkBoxItems.map(item => (
             <div key={item.id}>
               <CustomCheckbox
                 onChange={handleChangeAgreement}
@@ -90,6 +91,7 @@ const GiveConsent = () => {
             </div>
           ))}
         </Box>
+
         <Box className={(classes.center, classes.textAlignCenter)}>
           <Button
             id="submitButton"

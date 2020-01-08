@@ -23,6 +23,7 @@ describe('Redux > consent > consentReducer', () => {
     };
     expect(CounterReducer(initialState, action)).toBe(initialState);
   });
+
   it('returns name changed', () => {
     const nextState = {
       ...initialState,
@@ -34,6 +35,7 @@ describe('Redux > consent > consentReducer', () => {
     };
     expect(CounterReducer(initialState, action)).toMatchObject(nextState);
   });
+
   it('returns email changed', () => {
     const nextState = {
       ...initialState,
@@ -45,6 +47,7 @@ describe('Redux > consent > consentReducer', () => {
     };
     expect(CounterReducer(initialState, action)).toMatchObject(nextState);
   });
+
   it('returns agreements changed', () => {
     const nextState = {
       ...initialState,
