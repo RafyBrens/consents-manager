@@ -4,6 +4,8 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
+import { createMemoryHistory } from 'history';
+import { ConnectedRouter } from 'connected-react-router';
 import { actionTypes } from '../../redux/consent';
 import GiveConsent from './giveConsent';
 
@@ -19,8 +21,23 @@ describe('src > containers > GiveConsent', () => {
       create: null,
     },
   };
+
+  const history = createMemoryHistory();
+  // Mock props
+  const props = {
+    action: 'POP',
+    location: {
+      pathname: '/path/to/somewhere',
+    },
+    history,
+  };
+
   const store = mockStore({
     consent,
+    router: {
+      action: 'POP',
+      location: props.history.location,
+    },
   });
 
   /* Add jest mock spy to watch for store.dispatch method. See https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname for more info */
@@ -36,12 +53,14 @@ describe('src > containers > GiveConsent', () => {
     /* We can only use enzyme `mount`, no `shallow`, since we are using React hooks, which `shallow` doesn't support yet */
     const wrapper = mount(
       <Provider store={store}>
-        <GiveConsent />
+        <ConnectedRouter basename="/" history={history}>
+          <GiveConsent />
+        </ConnectedRouter>
       </Provider>
     );
 
     /* Basic snapshot test to make sure, that rendered component matches expected footprint. Note we are using `toJson` helper to transform enzyme output to jest snapshot */
-    expect(toJson(wrapper)).toMatchSnapshot();
+    expect(toJson(wrapper.find('GiveConsent'))).toMatchSnapshot();
 
     /* More precise test for input value */
     const name = wrapper
@@ -67,10 +86,16 @@ describe('src > containers > GiveConsent', () => {
           name: '',
         },
       },
+      router: {
+        action: 'POP',
+        location: props.history.location,
+      },
     });
     const wrapper = mount(
       <Provider store={newStore}>
-        <GiveConsent />
+        <ConnectedRouter basename="/" history={history}>
+          <GiveConsent />
+        </ConnectedRouter>
       </Provider>
     );
 
@@ -87,7 +112,9 @@ describe('src > containers > GiveConsent', () => {
   it('Fills inputs of give consent page and clicks submit', () => {
     const wrapper = mount(
       <Provider store={store}>
-        <GiveConsent />
+        <ConnectedRouter basename="/" history={history}>
+          <GiveConsent />
+        </ConnectedRouter>
       </Provider>
     );
 
@@ -104,8 +131,8 @@ describe('src > containers > GiveConsent', () => {
       .simulate('change', nameEventObj);
 
     /* Check if store.dispatch method was run */
-    expect(store.dispatch).toHaveBeenCalledTimes(1);
-    expect(store.getActions()).toEqual([actionName]);
+    expect(store.dispatch).toHaveBeenCalledTimes(2);
+    expect(store.getActions()).toContainEqual(actionName);
 
     /* Search for the input and types on it */
     const emailEventObject = { currentTarget: { value: 'r@gmail.com' } };
@@ -118,8 +145,8 @@ describe('src > containers > GiveConsent', () => {
       .hostNodes()
       .simulate('change', emailEventObject);
 
-    expect(store.dispatch).toHaveBeenCalledTimes(2);
-    expect(store.getActions()).toEqual([actionName, actionEmail]);
+    expect(store.dispatch).toHaveBeenCalledTimes(3);
+    expect(store.getActions()).toContainEqual(actionEmail);
 
     /* Search for the button and make enzyme click on it */
     const actionSubmit = {
@@ -132,7 +159,7 @@ describe('src > containers > GiveConsent', () => {
       .props()
       .onClick();
 
-    expect(store.dispatch).toHaveBeenCalledTimes(3);
-    expect(store.getActions()).toEqual([actionName, actionEmail, actionSubmit]);
+    expect(store.dispatch).toHaveBeenCalledTimes(4);
+    expect(store.getActions()).toContainEqual(actionSubmit);
   });
 });

@@ -15,6 +15,8 @@
     "react/destructuring-assignment": "off",
     "fp/no-delete": "warn",
     "fp/no-mutating-assign": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
     "fp/no-mutating-methods": [
       "warn",
       {

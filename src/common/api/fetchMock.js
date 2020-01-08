@@ -15,8 +15,11 @@ export default (url, request) => {
       return createPromise(result);
     }
     case `${baseUrl}/consents`: {
-      const result = JSON.parse(data);
-      return createPromise(result);
+      const newData = consents.map(c => ({
+        ...c,
+        agreementsText: getAgreementsText(c.agreements),
+      }));
+      return createPromise(newData);
     }
     default:
       return {};
@@ -29,3 +32,17 @@ const createPromise = data =>
       resolve(data);
     }, 500);
   });
+
+const items = {
+  1: 'Receive newsletter',
+  2: 'Be shown targeted ads',
+  3: 'Contribute to anonymous visit statistics',
+};
+
+const getAgreementsText = agreements => {
+  const result = agreements.reduce(
+    (text, element) => `${text} ${items[Number(element)]},`,
+    ''
+  );
+  return result;
+};
