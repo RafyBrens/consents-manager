@@ -12,7 +12,7 @@ import {
   changeAgreement,
 } from 'redux/consent/consentActions';
 import Sidebar from '../sidebar';
-import { selectors } from '../../redux/consent';
+import { consentSelectors } from '../../redux/consent';
 import useStyles from './styles';
 
 const checkBoxItems = [
@@ -26,13 +26,13 @@ const GiveConsent = () => {
   const classes = useStyles();
 
   /* Get values from Redux store. We defined selector (state => state.consent.email) inside consent feature folder, to make component Redux agnostic */
-  const name = useSelector(state => selectors.getConsentName(state));
-  const email = useSelector(state => selectors.getConsentEmail(state));
+  const name = useSelector(state => consentSelectors.getConsentName(state));
+  const email = useSelector(state => consentSelectors.getConsentEmail(state));
   const isSubmitEnabled = useSelector(state =>
-    selectors.isSubmitEnabled(state)
+    consentSelectors.isSubmitEnabled(state)
   );
   const agreements = useSelector((state, id) =>
-    selectors.getAgreements(state, id)
+    consentSelectors.getAgreements(state, id)
   );
   const isCheckBoxChecked = id => agreements.includes(id);
 

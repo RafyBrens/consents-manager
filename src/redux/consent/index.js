@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
-import * as selectors from './selectors';
+import * as consentSelectors from './consentSelectors';
 
 export { default as ConsentReducer } from './consentReducer';
 export { actionTypes };
-export { selectors };
+export { consentSelectors };
