@@ -91,6 +91,9 @@ https://github.com/mui-org/material-ui/issues/15511
 
 ## Possible improvements
 Introduce reselect
+
 Not to use dispatch in containers
+
 More tests to actions, reducers, etc
+
 Pages in pagination of table should match ui.
