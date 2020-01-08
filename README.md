@@ -88,3 +88,9 @@ You can use source folder relative paths for imports. `import Component from './
 Warning: [JSS] Could not find the referenced rule "checked" in "makeStyles".
 It's an issue in material-ui.
 https://github.com/mui-org/material-ui/issues/15511
+
+## Possible improvements
+Introduce reselect
+Not to use dispatch in containers
+More tests to actions, reducers, etc
+Pages in pagination of table should match ui.
