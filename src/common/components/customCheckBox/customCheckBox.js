@@ -7,6 +7,7 @@ const checkBoxStyles = () => ({
       color: 'rgb(10, 138, 251)',
     },
   },
+  checked: {}, // Makes the checkbox have default color
 });
 
 const CustomCheckBox = withStyles(checkBoxStyles)(Checkbox);
