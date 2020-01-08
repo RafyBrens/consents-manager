@@ -26,13 +26,16 @@ export default (state = initialState, action) => {
     case GET_CONSENTS_FAILED:
       return {
         ...state,
+        meta: {
+          callingApi: false,
+        },
         errors: {
           get: action.payload,
         },
       };
     case GET_CONSENTS_FINISHED:
       return {
-        ...initialState,
+        ...state,
         data: [...action.payload],
         meta: {
           callingApi: false,
