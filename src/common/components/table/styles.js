@@ -16,20 +16,12 @@ const useStyles = makeStyles(() => ({
     padding: '0.5rem',
     borderBottom: '2px solid black',
     borderRight: '2px solid black',
-
-    '&$lastChild': {
-      borderRight: 0,
-    },
   },
   td: {
     margin: 0,
     paddingTop: '0.5rem',
     borderBottom: '1px solid black',
     borderRight: '2px solid black',
-
-    ':lastChild': {
-      borderRight: 0,
-    },
   },
   pagination: {
     textAlign: 'center',

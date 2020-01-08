@@ -1,3 +1,3 @@
-import * as selectors from './selectors';
+import * as historySelectors from './historySelectors';
 
-export { selectors };
+export { historySelectors };

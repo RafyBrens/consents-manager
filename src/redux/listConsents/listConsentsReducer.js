@@ -31,7 +31,13 @@ export default (state = initialState, action) => {
         },
       };
     case GET_CONSENTS_FINISHED:
-      return { ...initialState, data: [...action.payload] };
+      return {
+        ...initialState,
+        data: [...action.payload],
+        meta: {
+          callingApi: false,
+        },
+      };
     default:
       return state;
   }

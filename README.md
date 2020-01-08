@@ -81,6 +81,8 @@ It's important to mention that `prettier` may give you the impression that there
 
 You can use source folder relative paths for imports. `import Component from './../../../../../../src/components/Component'` becomes `import Component from 'components/Component'`. Configuration is inside `jsconfig.json` file.
 
+## Mocks
+`fetch` function is mocked. And `POST` to `/consents` stores data in `localstorage` with key `consents` to simulate a working API.
 
 ## Present issues in the project
 Warning: [JSS] Could not find the referenced rule "checked" in "makeStyles".

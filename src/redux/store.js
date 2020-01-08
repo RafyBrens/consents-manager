@@ -12,7 +12,7 @@ export const history = createBrowserHistory();
 const createRootReducer = historyParam =>
   combineReducers({
     consent: ConsentReducer,
-    consents: ListConsentsReducer,
+    listConsents: ListConsentsReducer,
     router: connectRouter(historyParam),
   });
 
