@@ -13,4 +13,14 @@ export default class ConsentService {
     });
     return result;
   }
+
+  static async getConsents() {
+    const result = fetch(`${this.baseUrl}/consents`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return result;
+  }
 }

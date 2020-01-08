@@ -4,6 +4,7 @@ import { createBrowserHistory } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 
 import { ConsentReducer } from './consent';
+import { ListConsentsReducer } from './listConsents';
 
 export const history = createBrowserHistory();
 
@@ -11,6 +12,7 @@ export const history = createBrowserHistory();
 const createRootReducer = historyParam =>
   combineReducers({
     consent: ConsentReducer,
+    consents: ListConsentsReducer,
     router: connectRouter(historyParam),
   });
 
