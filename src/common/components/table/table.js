@@ -76,7 +76,7 @@ const CustomTable = ({ columns, data, pageSize }) => {
         <span className={classes.pages}>
           Page{' '}
           <strong>
-            {pageIndex + 1} of {pageOptions.length}
+            {pageOptions.length > 0 ? pageIndex + 1 : 0} of {pageOptions.length}
           </strong>{' '}
         </span>
         <button
