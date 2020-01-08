@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
 /* Separte internal imports */
-import { selectors } from 'redux/history';
+import { historySelectors } from 'redux/history';
 import { giveConsentRoute, listConsentRoute } from 'routes/routesAddress';
 import { redirectTo } from 'redux/history/historyActions';
 import useStyles from './styles';
@@ -28,7 +28,7 @@ const Sidebar = props => {
     [dispatch]
   );
 
-  const location = useSelector(state => selectors.getCurrentUrl(state));
+  const location = useSelector(state => historySelectors.getCurrentUrl(state));
   const itemSelectedClass = target =>
     location === target ? classes.itemSelected : classes.item;
 

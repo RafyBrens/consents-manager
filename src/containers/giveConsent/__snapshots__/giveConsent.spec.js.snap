@@ -504,7 +504,6 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                     checked={false}
                     classes={
                       Object {
-                        "checked": "WithStyles(ForwardRef(Checkbox))-checked-89",
                         "root": "WithStyles(ForwardRef(Checkbox))-root-88",
                       }
                     }
@@ -515,7 +514,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                       checked={false}
                       classes={
                         Object {
-                          "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                          "checked": "Mui-checked",
                           "colorPrimary": "MuiCheckbox-colorPrimary",
                           "colorSecondary": "MuiCheckbox-colorSecondary",
                           "disabled": "Mui-disabled",
@@ -535,7 +534,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                         }
                         classes={
                           Object {
-                            "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                            "checked": "Mui-checked",
                             "disabled": "Mui-disabled",
                             "root": "MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                           }
@@ -565,10 +564,10 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           }
                           classes={
                             Object {
-                              "checked": "PrivateSwitchBase-checked-97 Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
-                              "disabled": "PrivateSwitchBase-disabled-98 Mui-disabled",
-                              "input": "PrivateSwitchBase-input-99",
-                              "root": "PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
+                              "checked": "PrivateSwitchBase-checked-96 Mui-checked",
+                              "disabled": "PrivateSwitchBase-disabled-97 Mui-disabled",
+                              "input": "PrivateSwitchBase-input-98",
+                              "root": "PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                             }
                           }
                           color="secondary"
@@ -588,7 +587,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           value={1}
                         >
                           <WithStyles(ForwardRef(IconButton))
-                            className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                            className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                             color="secondary"
                             component="span"
                             disabled={false}
@@ -597,7 +596,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             tabIndex={null}
                           >
                             <ForwardRef(IconButton)
-                              className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                              className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                               classes={
                                 Object {
                                   "colorInherit": "MuiIconButton-colorInherit",
@@ -620,7 +619,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             >
                               <WithStyles(ForwardRef(ButtonBase))
                                 centerRipple={true}
-                                className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                 component="span"
                                 disabled={false}
                                 focusRipple={true}
@@ -630,7 +629,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                               >
                                 <ForwardRef(ButtonBase)
                                   centerRipple={true}
-                                  className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                  className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                   classes={
                                     Object {
                                       "disabled": "Mui-disabled",
@@ -647,7 +646,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                 >
                                   <span
                                     aria-disabled={false}
-                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                     onBlur={[Function]}
                                     onDragLeave={[Function]}
                                     onFocus={[Function]}
@@ -666,7 +665,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                     >
                                       <input
                                         checked={false}
-                                        className="PrivateSwitchBase-input-99"
+                                        className="PrivateSwitchBase-input-98"
                                         data-indeterminate={false}
                                         disabled={false}
                                         onChange={[Function]}
@@ -767,7 +766,6 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                     checked={false}
                     classes={
                       Object {
-                        "checked": "WithStyles(ForwardRef(Checkbox))-checked-89",
                         "root": "WithStyles(ForwardRef(Checkbox))-root-88",
                       }
                     }
@@ -778,7 +776,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                       checked={false}
                       classes={
                         Object {
-                          "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                          "checked": "Mui-checked",
                           "colorPrimary": "MuiCheckbox-colorPrimary",
                           "colorSecondary": "MuiCheckbox-colorSecondary",
                           "disabled": "Mui-disabled",
@@ -798,7 +796,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                         }
                         classes={
                           Object {
-                            "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                            "checked": "Mui-checked",
                             "disabled": "Mui-disabled",
                             "root": "MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                           }
@@ -828,10 +826,10 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           }
                           classes={
                             Object {
-                              "checked": "PrivateSwitchBase-checked-97 Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
-                              "disabled": "PrivateSwitchBase-disabled-98 Mui-disabled",
-                              "input": "PrivateSwitchBase-input-99",
-                              "root": "PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
+                              "checked": "PrivateSwitchBase-checked-96 Mui-checked",
+                              "disabled": "PrivateSwitchBase-disabled-97 Mui-disabled",
+                              "input": "PrivateSwitchBase-input-98",
+                              "root": "PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                             }
                           }
                           color="secondary"
@@ -851,7 +849,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           value={2}
                         >
                           <WithStyles(ForwardRef(IconButton))
-                            className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                            className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                             color="secondary"
                             component="span"
                             disabled={false}
@@ -860,7 +858,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             tabIndex={null}
                           >
                             <ForwardRef(IconButton)
-                              className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                              className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                               classes={
                                 Object {
                                   "colorInherit": "MuiIconButton-colorInherit",
@@ -883,7 +881,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             >
                               <WithStyles(ForwardRef(ButtonBase))
                                 centerRipple={true}
-                                className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                 component="span"
                                 disabled={false}
                                 focusRipple={true}
@@ -893,7 +891,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                               >
                                 <ForwardRef(ButtonBase)
                                   centerRipple={true}
-                                  className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                  className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                   classes={
                                     Object {
                                       "disabled": "Mui-disabled",
@@ -910,7 +908,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                 >
                                   <span
                                     aria-disabled={false}
-                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                     onBlur={[Function]}
                                     onDragLeave={[Function]}
                                     onFocus={[Function]}
@@ -929,7 +927,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                     >
                                       <input
                                         checked={false}
-                                        className="PrivateSwitchBase-input-99"
+                                        className="PrivateSwitchBase-input-98"
                                         data-indeterminate={false}
                                         disabled={false}
                                         onChange={[Function]}
@@ -1030,7 +1028,6 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                     checked={false}
                     classes={
                       Object {
-                        "checked": "WithStyles(ForwardRef(Checkbox))-checked-89",
                         "root": "WithStyles(ForwardRef(Checkbox))-root-88",
                       }
                     }
@@ -1041,7 +1038,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                       checked={false}
                       classes={
                         Object {
-                          "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                          "checked": "Mui-checked",
                           "colorPrimary": "MuiCheckbox-colorPrimary",
                           "colorSecondary": "MuiCheckbox-colorSecondary",
                           "disabled": "Mui-disabled",
@@ -1061,7 +1058,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                         }
                         classes={
                           Object {
-                            "checked": "Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
+                            "checked": "Mui-checked",
                             "disabled": "Mui-disabled",
                             "root": "MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                           }
@@ -1091,10 +1088,10 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           }
                           classes={
                             Object {
-                              "checked": "PrivateSwitchBase-checked-97 Mui-checked WithStyles(ForwardRef(Checkbox))-checked-89",
-                              "disabled": "PrivateSwitchBase-disabled-98 Mui-disabled",
-                              "input": "PrivateSwitchBase-input-99",
-                              "root": "PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
+                              "checked": "PrivateSwitchBase-checked-96 Mui-checked",
+                              "disabled": "PrivateSwitchBase-disabled-97 Mui-disabled",
+                              "input": "PrivateSwitchBase-input-98",
+                              "root": "PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary",
                             }
                           }
                           color="secondary"
@@ -1114,7 +1111,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                           value={3}
                         >
                           <WithStyles(ForwardRef(IconButton))
-                            className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                            className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                             color="secondary"
                             component="span"
                             disabled={false}
@@ -1123,7 +1120,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             tabIndex={null}
                           >
                             <ForwardRef(IconButton)
-                              className="PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
+                              className="PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary"
                               classes={
                                 Object {
                                   "colorInherit": "MuiIconButton-colorInherit",
@@ -1146,7 +1143,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                             >
                               <WithStyles(ForwardRef(ButtonBase))
                                 centerRipple={true}
-                                className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                 component="span"
                                 disabled={false}
                                 focusRipple={true}
@@ -1156,7 +1153,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                               >
                                 <ForwardRef(ButtonBase)
                                   centerRipple={true}
-                                  className="MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                  className="MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                   classes={
                                     Object {
                                       "disabled": "Mui-disabled",
@@ -1173,7 +1170,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                 >
                                   <span
                                     aria-disabled={false}
-                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-96 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
+                                    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-95 MuiCheckbox-root WithStyles(ForwardRef(Checkbox))-root-88 MuiCheckbox-colorSecondary MuiIconButton-colorSecondary"
                                     onBlur={[Function]}
                                     onDragLeave={[Function]}
                                     onFocus={[Function]}
@@ -1192,7 +1189,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
                                     >
                                       <input
                                         checked={false}
-                                        className="PrivateSwitchBase-input-99"
+                                        className="PrivateSwitchBase-input-98"
                                         data-indeterminate={false}
                                         disabled={false}
                                         onChange={[Function]}
@@ -1287,7 +1284,7 @@ exports[`src > containers > GiveConsent renders without crashing 1`] = `
             className="makeStyles-textAlignCenter-3"
           >
             <div
-              className="MuiBox-root MuiBox-root-118 makeStyles-textAlignCenter-3"
+              className="MuiBox-root MuiBox-root-117 makeStyles-textAlignCenter-3"
             >
               <WithStyles(ForwardRef(Button))
                 className="makeStyles-submitButton-4"

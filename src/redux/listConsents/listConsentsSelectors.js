@@ -1,1 +1,1 @@
-export const getListConsents = state => state.consents.data;
+export const getListConsents = state => state.listConsents.data;

@@ -1,18 +1,18 @@
 import {
-  CHANGE_EMAIL_CONSENT,
-  CHANGE_NAME_CONSENT,
-  CHANGE_AGREEMENTS_CONSENT,
+  GET_CONSENTS_STARTED,
+  GET_CONSENTS_FAILED,
+  GET_CONSENTS_FINISHED,
 } from './actionTypes';
-import CounterReducer from './consentReducer';
+import CounterReducer from './listConsentsReducer';
 
-describe('Redux > consent > consentReducer', () => {
+describe('Redux > consent > listConsentsReducer', () => {
   const initialState = {
-    data: { name: 'Rafael', email: 'rafybrens@gmail.com', agreements: [] },
+    data: [],
     meta: {
       callingApi: false,
     },
     errors: {
-      create: null,
+      get: null,
     },
   };
 
@@ -24,38 +24,37 @@ describe('Redux > consent > consentReducer', () => {
     expect(CounterReducer(initialState, action)).toBe(initialState);
   });
 
-  it('returns name changed', () => {
+  it('returns callingApi true', () => {
     const nextState = {
       ...initialState,
-      data: { ...initialState.data, name: 'newName' },
+      meta: { ...initialState.meta, callingApi: true },
     };
     const action = {
-      type: CHANGE_NAME_CONSENT,
-      payload: 'newName',
+      type: GET_CONSENTS_STARTED,
     };
     expect(CounterReducer(initialState, action)).toMatchObject(nextState);
   });
 
-  it('returns email changed', () => {
+  it('returns error changed', () => {
     const nextState = {
       ...initialState,
-      data: { ...initialState.data, email: 'newEmail' },
+      errors: { ...initialState.error, get: 'Something went wrong' },
     };
     const action = {
-      type: CHANGE_EMAIL_CONSENT,
-      payload: 'newEmail',
+      type: GET_CONSENTS_FAILED,
+      payload: 'Something went wrong',
     };
     expect(CounterReducer(initialState, action)).toMatchObject(nextState);
   });
 
-  it('returns agreements changed', () => {
+  it('returns callingApi false', () => {
     const nextState = {
       ...initialState,
-      data: { ...initialState.data, agreements: [1] },
+      meta: { ...initialState.meta, callingApi: false },
     };
     const action = {
-      type: CHANGE_AGREEMENTS_CONSENT,
-      payload: { id: 1, checked: true },
+      type: GET_CONSENTS_FINISHED,
+      payload: [],
     };
     expect(CounterReducer(initialState, action)).toMatchObject(nextState);
   });
