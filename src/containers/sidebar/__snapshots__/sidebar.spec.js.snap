@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src > containers > sidebar renders without crashing 1`] = `
+<Sidebar>
+  <div
+    className="makeStyles-root-1"
+  >
+    <CssBaseline />
+    <WithStyles(ForwardRef(Drawer))
+      anchor="left"
+      className="makeStyles-drawer-3"
+      classes={
+        Object {
+          "paper": "makeStyles-drawerPaper-4",
+        }
+      }
+      variant="permanent"
+    >
+      <ForwardRef(Drawer)
+        anchor="left"
+        className="makeStyles-drawer-3"
+        classes={
+          Object {
+            "docked": "MuiDrawer-docked",
+            "modal": "MuiDrawer-modal",
+            "paper": "MuiDrawer-paper makeStyles-drawerPaper-4",
+            "paperAnchorBottom": "MuiDrawer-paperAnchorBottom",
+            "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom",
+            "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft",
+            "paperAnchorDockedRight": "MuiDrawer-paperAnchorDockedRight",
+            "paperAnchorDockedTop": "MuiDrawer-paperAnchorDockedTop",
+            "paperAnchorLeft": "MuiDrawer-paperAnchorLeft",
+            "paperAnchorRight": "MuiDrawer-paperAnchorRight",
+            "paperAnchorTop": "MuiDrawer-paperAnchorTop",
+            "root": "MuiDrawer-root",
+          }
+        }
+        variant="permanent"
+      >
+        <div
+          className="MuiDrawer-root MuiDrawer-docked makeStyles-drawer-3"
+        >
+          <WithStyles(ForwardRef(Paper))
+            className="MuiDrawer-paper makeStyles-drawerPaper-4 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft"
+            elevation={0}
+            square={true}
+          >
+            <ForwardRef(Paper)
+              className="MuiDrawer-paper makeStyles-drawerPaper-4 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft"
+              classes={
+                Object {
+                  "elevation0": "MuiPaper-elevation0",
+                  "elevation1": "MuiPaper-elevation1",
+                  "elevation10": "MuiPaper-elevation10",
+                  "elevation11": "MuiPaper-elevation11",
+                  "elevation12": "MuiPaper-elevation12",
+                  "elevation13": "MuiPaper-elevation13",
+                  "elevation14": "MuiPaper-elevation14",
+                  "elevation15": "MuiPaper-elevation15",
+                  "elevation16": "MuiPaper-elevation16",
+                  "elevation17": "MuiPaper-elevation17",
+                  "elevation18": "MuiPaper-elevation18",
+                  "elevation19": "MuiPaper-elevation19",
+                  "elevation2": "MuiPaper-elevation2",
+                  "elevation20": "MuiPaper-elevation20",
+                  "elevation21": "MuiPaper-elevation21",
+                  "elevation22": "MuiPaper-elevation22",
+                  "elevation23": "MuiPaper-elevation23",
+                  "elevation24": "MuiPaper-elevation24",
+                  "elevation3": "MuiPaper-elevation3",
+                  "elevation4": "MuiPaper-elevation4",
+                  "elevation5": "MuiPaper-elevation5",
+                  "elevation6": "MuiPaper-elevation6",
+                  "elevation7": "MuiPaper-elevation7",
+                  "elevation8": "MuiPaper-elevation8",
+                  "elevation9": "MuiPaper-elevation9",
+                  "outlined": "MuiPaper-outlined",
+                  "root": "MuiPaper-root",
+                  "rounded": "MuiPaper-rounded",
+                }
+              }
+              elevation={0}
+              square={true}
+            >
+              <div
+                className="MuiPaper-root MuiDrawer-paper makeStyles-drawerPaper-4 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft MuiPaper-elevation0"
+              >
+                <WithStyles(ForwardRef(List))>
+                  <ForwardRef(List)
+                    classes={
+                      Object {
+                        "dense": "MuiList-dense",
+                        "padding": "MuiList-padding",
+                        "root": "MuiList-root",
+                        "subheader": "MuiList-subheader",
+                      }
+                    }
+                  >
+                    <ul
+                      className="MuiList-root MuiList-padding"
+                    >
+                      <div
+                        className="makeStyles-item-7"
+                        key="Give consent"
+                      >
+                        <WithStyles(ForwardRef(Divider))>
+                          <ForwardRef(Divider)
+                            classes={
+                              Object {
+                                "absolute": "MuiDivider-absolute",
+                                "inset": "MuiDivider-inset",
+                                "light": "MuiDivider-light",
+                                "middle": "MuiDivider-middle",
+                                "root": "MuiDivider-root",
+                                "vertical": "MuiDivider-vertical",
+                              }
+                            }
+                          >
+                            <hr
+                              className="MuiDivider-root"
+                            />
+                          </ForwardRef(Divider)>
+                        </WithStyles(ForwardRef(Divider))>
+                        <WithStyles(ForwardRef(ListItem))
+                          button={true}
+                          key="Give consent"
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(ListItem)
+                            button={true}
+                            classes={
+                              Object {
+                                "alignItemsFlexStart": "MuiListItem-alignItemsFlexStart",
+                                "button": "MuiListItem-button",
+                                "container": "MuiListItem-container",
+                                "dense": "MuiListItem-dense",
+                                "disabled": "Mui-disabled",
+                                "divider": "MuiListItem-divider",
+                                "focusVisible": "Mui-focusVisible",
+                                "gutters": "MuiListItem-gutters",
+                                "root": "MuiListItem-root",
+                                "secondaryAction": "MuiListItem-secondaryAction",
+                                "selected": "Mui-selected",
+                              }
+                            }
+                            onClick={[Function]}
+                          >
+                            <WithStyles(ForwardRef(ButtonBase))
+                              className="MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                              component="div"
+                              disabled={false}
+                              focusVisibleClassName="Mui-focusVisible"
+                              onClick={[Function]}
+                            >
+                              <ForwardRef(ButtonBase)
+                                className="MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                classes={
+                                  Object {
+                                    "disabled": "Mui-disabled",
+                                    "focusVisible": "Mui-focusVisible",
+                                    "root": "MuiButtonBase-root",
+                                  }
+                                }
+                                component="div"
+                                disabled={false}
+                                focusVisibleClassName="Mui-focusVisible"
+                                onClick={[Function]}
+                              >
+                                <div
+                                  aria-disabled={false}
+                                  className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragLeave={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  role="button"
+                                  tabIndex={0}
+                                >
+                                  <WithStyles(ForwardRef(ListItemText))
+                                    disableTypography={true}
+                                    key=".0"
+                                    primary="Give consent"
+                                  >
+                                    <ForwardRef(ListItemText)
+                                      classes={
+                                        Object {
+                                          "dense": "MuiListItemText-dense",
+                                          "inset": "MuiListItemText-inset",
+                                          "multiline": "MuiListItemText-multiline",
+                                          "primary": "MuiListItemText-primary",
+                                          "root": "MuiListItemText-root",
+                                          "secondary": "MuiListItemText-secondary",
+                                        }
+                                      }
+                                      disableTypography={true}
+                                      primary="Give consent"
+                                    >
+                                      <div
+                                        className="MuiListItemText-root"
+                                      >
+                                        Give consent
+                                      </div>
+                                    </ForwardRef(ListItemText)>
+                                  </WithStyles(ForwardRef(ListItemText))>
+                                  <NoSsr>
+                                    <WithStyles(undefined)
+                                      center={false}
+                                    >
+                                      <ForwardRef(TouchRipple)
+                                        center={false}
+                                        classes={
+                                          Object {
+                                            "child": "MuiTouchRipple-child",
+                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                            "ripple": "MuiTouchRipple-ripple",
+                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                            "root": "MuiTouchRipple-root",
+                                          }
+                                        }
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root"
+                                        >
+                                          <TransitionGroup
+                                            childFactory={[Function]}
+                                            component={null}
+                                            exit={true}
+                                          />
+                                        </span>
+                                      </ForwardRef(TouchRipple)>
+                                    </WithStyles(undefined)>
+                                  </NoSsr>
+                                </div>
+                              </ForwardRef(ButtonBase)>
+                            </WithStyles(ForwardRef(ButtonBase))>
+                          </ForwardRef(ListItem)>
+                        </WithStyles(ForwardRef(ListItem))>
+                        <WithStyles(ForwardRef(Divider))>
+                          <ForwardRef(Divider)
+                            classes={
+                              Object {
+                                "absolute": "MuiDivider-absolute",
+                                "inset": "MuiDivider-inset",
+                                "light": "MuiDivider-light",
+                                "middle": "MuiDivider-middle",
+                                "root": "MuiDivider-root",
+                                "vertical": "MuiDivider-vertical",
+                              }
+                            }
+                          >
+                            <hr
+                              className="MuiDivider-root"
+                            />
+                          </ForwardRef(Divider)>
+                        </WithStyles(ForwardRef(Divider))>
+                      </div>
+                      <div
+                        className="makeStyles-item-7"
+                        key="Collected consents"
+                      >
+                        <WithStyles(ForwardRef(Divider))>
+                          <ForwardRef(Divider)
+                            classes={
+                              Object {
+                                "absolute": "MuiDivider-absolute",
+                                "inset": "MuiDivider-inset",
+                                "light": "MuiDivider-light",
+                                "middle": "MuiDivider-middle",
+                                "root": "MuiDivider-root",
+                                "vertical": "MuiDivider-vertical",
+                              }
+                            }
+                          >
+                            <hr
+                              className="MuiDivider-root"
+                            />
+                          </ForwardRef(Divider)>
+                        </WithStyles(ForwardRef(Divider))>
+                        <WithStyles(ForwardRef(ListItem))
+                          button={true}
+                          key="Collected consents"
+                          onClick={[Function]}
+                        >
+                          <ForwardRef(ListItem)
+                            button={true}
+                            classes={
+                              Object {
+                                "alignItemsFlexStart": "MuiListItem-alignItemsFlexStart",
+                                "button": "MuiListItem-button",
+                                "container": "MuiListItem-container",
+                                "dense": "MuiListItem-dense",
+                                "disabled": "Mui-disabled",
+                                "divider": "MuiListItem-divider",
+                                "focusVisible": "Mui-focusVisible",
+                                "gutters": "MuiListItem-gutters",
+                                "root": "MuiListItem-root",
+                                "secondaryAction": "MuiListItem-secondaryAction",
+                                "selected": "Mui-selected",
+                              }
+                            }
+                            onClick={[Function]}
+                          >
+                            <WithStyles(ForwardRef(ButtonBase))
+                              className="MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                              component="div"
+                              disabled={false}
+                              focusVisibleClassName="Mui-focusVisible"
+                              onClick={[Function]}
+                            >
+                              <ForwardRef(ButtonBase)
+                                className="MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                classes={
+                                  Object {
+                                    "disabled": "Mui-disabled",
+                                    "focusVisible": "Mui-focusVisible",
+                                    "root": "MuiButtonBase-root",
+                                  }
+                                }
+                                component="div"
+                                disabled={false}
+                                focusVisibleClassName="Mui-focusVisible"
+                                onClick={[Function]}
+                              >
+                                <div
+                                  aria-disabled={false}
+                                  className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                  onBlur={[Function]}
+                                  onClick={[Function]}
+                                  onDragLeave={[Function]}
+                                  onFocus={[Function]}
+                                  onKeyDown={[Function]}
+                                  onKeyUp={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onMouseUp={[Function]}
+                                  onTouchEnd={[Function]}
+                                  onTouchMove={[Function]}
+                                  onTouchStart={[Function]}
+                                  role="button"
+                                  tabIndex={0}
+                                >
+                                  <WithStyles(ForwardRef(ListItemText))
+                                    disableTypography={true}
+                                    key=".0"
+                                    primary="Collected consents"
+                                  >
+                                    <ForwardRef(ListItemText)
+                                      classes={
+                                        Object {
+                                          "dense": "MuiListItemText-dense",
+                                          "inset": "MuiListItemText-inset",
+                                          "multiline": "MuiListItemText-multiline",
+                                          "primary": "MuiListItemText-primary",
+                                          "root": "MuiListItemText-root",
+                                          "secondary": "MuiListItemText-secondary",
+                                        }
+                                      }
+                                      disableTypography={true}
+                                      primary="Collected consents"
+                                    >
+                                      <div
+                                        className="MuiListItemText-root"
+                                      >
+                                        Collected consents
+                                      </div>
+                                    </ForwardRef(ListItemText)>
+                                  </WithStyles(ForwardRef(ListItemText))>
+                                  <NoSsr>
+                                    <WithStyles(undefined)
+                                      center={false}
+                                    >
+                                      <ForwardRef(TouchRipple)
+                                        center={false}
+                                        classes={
+                                          Object {
+                                            "child": "MuiTouchRipple-child",
+                                            "childLeaving": "MuiTouchRipple-childLeaving",
+                                            "childPulsate": "MuiTouchRipple-childPulsate",
+                                            "ripple": "MuiTouchRipple-ripple",
+                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                            "root": "MuiTouchRipple-root",
+                                          }
+                                        }
+                                      >
+                                        <span
+                                          className="MuiTouchRipple-root"
+                                        >
+                                          <TransitionGroup
+                                            childFactory={[Function]}
+                                            component={null}
+                                            exit={true}
+                                          />
+                                        </span>
+                                      </ForwardRef(TouchRipple)>
+                                    </WithStyles(undefined)>
+                                  </NoSsr>
+                                </div>
+                              </ForwardRef(ButtonBase)>
+                            </WithStyles(ForwardRef(ButtonBase))>
+                          </ForwardRef(ListItem)>
+                        </WithStyles(ForwardRef(ListItem))>
+                        <WithStyles(ForwardRef(Divider))>
+                          <ForwardRef(Divider)
+                            classes={
+                              Object {
+                                "absolute": "MuiDivider-absolute",
+                                "inset": "MuiDivider-inset",
+                                "light": "MuiDivider-light",
+                                "middle": "MuiDivider-middle",
+                                "root": "MuiDivider-root",
+                                "vertical": "MuiDivider-vertical",
+                              }
+                            }
+                          >
+                            <hr
+                              className="MuiDivider-root"
+                            />
+                          </ForwardRef(Divider)>
+                        </WithStyles(ForwardRef(Divider))>
+                      </div>
+                    </ul>
+                  </ForwardRef(List)>
+                </WithStyles(ForwardRef(List))>
+              </div>
+            </ForwardRef(Paper)>
+          </WithStyles(ForwardRef(Paper))>
+        </div>
+      </ForwardRef(Drawer)>
+    </WithStyles(ForwardRef(Drawer))>
+    <main
+      className="makeStyles-content-6"
+    >
+      <div />
+      <div
+        className="makeStyles-topbar-5"
+      />
+    </main>
+  </div>
+</Sidebar>
+`;
